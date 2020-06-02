@@ -1,0 +1,404 @@
+:root {
+  --primary: #c57153;
+  --secondary: #ffc636;
+  --third: #a76249;
+  --fourth: rgb(194, 191, 191);
+  --five: #811f2c;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: var(--fourth);
+  font-size: 1.4em;
+  /*font-family: comic;*/
+  background-color: var(--primary);
+  background-image: url("../img/FOND.png");
+  background-size: cover;
+  background-attachment: fixed;
+  /* height: auto;
+  width: 500px;
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+  position: relative; */
+}
+
+@font-face {
+  src: url("../font/orange juice 2.0.ttf");
+  font-family: comic;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.cadreSombre {
+  background-color: var(--third);
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin: 30px 0;
+  width: auto;
+}
+
+/* NAVBAR */
+
+.logo {
+  width: 200px;
+}
+
+.navbar {
+  height: 100px;
+  justify-content: space-between;
+  width: 80vw;
+  height: auto;
+}
+
+NavItem {
+  margin-left: auto;
+}
+
+.nav-link {
+  display: inline;
+}
+
+a {
+  color: var(--secondary);
+  display: inline-block;
+  padding: 0px 20px;
+  list-style: none;
+}
+
+a:hover {
+  color: var(--fourth);
+}
+
+.navCadre {
+  background-color: var(--third);
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding: auto;
+}
+
+/* Inscription & SeConnecter */
+
+button:hover {
+  background-color: var(--fourth);
+}
+
+.radio {
+  display: inline-block;
+  box-sizing: border-box;
+  padding-right: 5%;
+  margin-left: 1.25rem;
+}
+
+input[type="radio"] {
+  margin-top: +9px;
+}
+
+.formTitle {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+input.radioAge {
+  justify-content: center;
+}
+
+.btnLogin {
+  background: none;
+  border: 2px solid var(--secondary);
+  color: var(--secondary);
+  padding: 6px 12px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.6);
+  display: inline-block;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+.erreur {
+  color: var(--five);
+}
+
+.wrapper {
+  text-align: center;
+}
+
+input[type="email"],
+input[type="password"] {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 10px 16px;
+  border-radius: 20px;
+  border: 2px solid var(--secondary);
+  font-size: 1em;
+}
+
+input[type="text"],
+input[type="number"],
+textarea,
+select.form-control {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 10px 16px;
+  border-radius: 20px;
+  border: 2px solid var(--secondary);
+  font-size: 1em;
+  min-width: 500px;
+  width: auto;
+}
+
+.adminLabel {
+  width: auto;
+}
+input[type="text"]:focus,
+select.form-control:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+/* #comDesobei {
+  width: 100%;
+} */
+
+#tabDesobei {
+  margin: auto;
+}
+
+td,
+th {
+  background-color: var(--primary);
+  text-align: left;
+  padding: 8px;
+}
+.thead {
+  color: var(--secondary);
+  text-align: center;
+  vertical-align: middle;
+}
+
+.radioTab {
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* top-left border-radius */
+table tr:first-child th:first-child {
+  border-top-left-radius: 10px;
+}
+
+/* top-right border-radius */
+table tr:first-child th:last-child {
+  border-top-right-radius: 10px;
+}
+
+/* bottom-left border-radius */
+table tr:last-child td:first-child {
+  border-bottom-left-radius: 10px;
+}
+
+/* bottom-right border-radius */
+table tr:last-child td:last-child {
+  border-bottom-right-radius: 10px;
+}
+
+/* Quizz */
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  color: var(--fourth);
+}
+
+.result {
+  margin-top: 20px;
+}
+
+.options {
+  cursor: pointer;
+  border: 2px solid var(--secondary);
+  padding: 10px;
+  width: 40vw;
+}
+
+.selected {
+  background: linear-gradient(to right, #74ebd5, #acb6e5) !important;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.ui.message {
+  margin: 1em auto;
+  background: var(--third);
+}
+
+.question {
+  color: var(--secondary);
+}
+
+/* Accueil */
+
+.accueilTitre {
+  text-align: center;
+  font-weight: bold;
+  color: var(--secondary);
+}
+
+.imgAccueil {
+  position: relative;
+  display: block;
+  max-width: 800px;
+  max-height: 500px;
+  width: auto;
+  height: auto;
+  text-align: center;
+  margin: 2vh auto;
+}
+
+.accueilContenu {
+  margin: 2vh 1vw;
+}
+
+/* Resultat */
+
+.resultTitre {
+  text-align: center;
+  font-weight: bold;
+  color: var(--secondary);
+}
+
+.resultatContenu {
+  margin: 2vh 1vw;
+  text-align: center;
+}
+
+.btnQuizz,
+.btnLigneTps {
+  background: none;
+  border: 2px solid var(--secondary);
+  color: var(--secondary);
+  padding: 3px 6px;
+  margin: 0 10px;
+  border-radius: 20px;
+  /* text-transform: uppercase; */
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.6);
+  display: inline-block;
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+
+/* Ligne du temps */
+
+.ldtTitre {
+  text-align: center;
+  font-weight: bold;
+  color: var(--secondary);
+}
+
+.checkIcon {
+  color: green;
+}
+
+.falseIcon {
+  color: var(--five);
+}
+
+.reponseJoueur {
+  text-align: center;
+}
+
+/* LogOut  */
+
+.etatConnexion {
+  display: block;
+  font-size: 0.5em;
+  text-align: center;
+}
+
+.logoutContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--five);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: green;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 24px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* Responsive */
+@media only screen and (min-device-width: 300px) and (max-device-width: 800px) {
+  body {
+    font-size: 1.8em;
+  }
+
+  .accueilContenu {
+    display: block;
+    width: 80vw;
+  }
+  .imgAccueil {
+    max-width: 75vw;
+    max-height: 40vh;
+    float: none;
+    text-align: center;
+    margin: 2vh auto;
+  }
+}

@@ -1,0 +1,37 @@
+.idea
+.history
+bin
+src/Migrations/
+phpunit.xml.dist
+
+###> symfony/framework-bundle ###
+/.env.local
+/.env.local.php
+/.env.*.local
+/config/secrets/prod/prod.decrypt.private.php
+public/bundles
+var
+vendor
+###< symfony/framework-bundle ###
+
+###> symfony/phpunit-bridge ###
+.phpunit
+.phpunit.result.cache
+/phpunit.xml
+###< symfony/phpunit-bridge ###
+.env
+.env.test
+
+###> symfony/webpack-encore-bundle ###
+npm-debug.log
+yarn-error.log
+###< symfony/webpack-encore-bundle ###
+assets/fichier Quinoa
+.lock
+node_modules
+/public/
+
+###> lexik/jwt-authentication-bundle ###
+/config/jwt/.pem
+###< lexik/jwt-authentication-bundle ###
+public/build/app.*
