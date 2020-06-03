@@ -5,7 +5,6 @@
 app_quizz:
   path: /
   controller: App\Controller\ReactController::index
-
-#  http://vps799626.ovh.net:8000/:
+#  http://vps799626.ovh.net:4000/:
 #     type: redirect
-#     to: https://www.vps799626.ovh.net:8000/
+#     to: https://www.vps799626.ovh.net:4000/
