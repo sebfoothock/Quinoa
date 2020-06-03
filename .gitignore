@@ -1,5 +1,6 @@
 .idea
 .history
+bin
 src/Migrations/
 phpunit.xml.dist
 
@@ -8,8 +9,9 @@ phpunit.xml.dist
 /.env.local.php
 /.env.*.local
 /config/secrets/prod/prod.decrypt.private.php
+public/bundles
 var
-
+vendor
 ###< symfony/framework-bundle ###
 
 ###> symfony/phpunit-bridge ###
@@ -27,6 +29,7 @@ yarn-error.log
 assets/fichier Quinoa
 .lock
 node_modules
+/public/
 
 ###> lexik/jwt-authentication-bundle ###
 /config/jwt/.pem
