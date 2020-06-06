@@ -7,7 +7,7 @@ class Accueil extends Component {
       <div className="container center">
         <div className="row justify-content-md-center">
           <div className="cadreSombre">
-            <h1 className="accueilTitre">Le Jeu Dezobeyi</h1>
+            <h1 className="accueilTitre">Jeu Dezobeyi</h1>
             <div className="accueilContenu">
               <span>
                 <h4>
