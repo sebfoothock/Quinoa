@@ -1,7 +1,12 @@
 CHANGELOG
 =========
 
-For a diff between two versions https://github.com/lexik/LexikJWTAuthenticationBundle/compare/v1.0.0...v2.6.5
+For a diff between two versions https://github.com/lexik/LexikJWTAuthenticationBundle/compare/v1.0.0...v2.7.0
+
+## [2.7.0](https://github.com/lexik/LexikJWTAuthenticationBundle/tree/v2.7.0) (2020-05-29)
+
+* feature [\#753](https://github.com/lexik/LexikJWTAuthenticationBundle/pull/753) Add `set_cookies` option to store JWT in secure cookies ([chalasr](https://github.com/chalasr))
+* feature [\#737](https://github.com/lexik/LexikJWTAuthenticationBundle/pull/737) Enable to keep the modified payload after decode ([cedriclombardot](https://github.com/cedriclombardot))
 
 ## [2.6.5](https://github.com/lexik/LexikJWTAuthenticationBundle/tree/v2.6.5) (2019-11-22)
 
@@ -130,7 +135,7 @@ For a diff between two versions https://github.com/lexik/LexikJWTAuthenticationB
 * feature [\#230](https://github.com/lexik/LexikJWTAuthenticationBundle/pull/230) Introduce JWTExpiredEvent ([chalasr](https://github.com/chalasr))
 * feature [\#184](https://github.com/lexik/LexikJWTAuthenticationBundle/pull/184) [Security] Deprecate current system in favor of a JWTTokenAuthenticator (Guard) ([chalasr](https://github.com/chalasr))
 * feature [\#218](https://github.com/lexik/LexikJWTAuthenticationBundle/pull/218) Add more flexibility in token extractors configuration ([chalasr](https://github.com/chalasr))
-* feature [\#217](https://github.com/lexik/LexikJWTAuthenticationBundle/pull/217) Refactor TokenExtractors loadi ng for easy overriding ([chalasr](https://github.com/chalasr))
+* feature [\#217](https://github.com/lexik/LexikJWTAuthenticationBundle/pull/217) Refactor TokenExtractors loading for easy overriding ([chalasr](https://github.com/chalasr))
 * feature [\#202](https://github.com/lexik/LexikJWTAuthenticationBundle/pull/202) Exceptions simplified ([Spomky](https://github.com/Spomky))
 * feature [\#201](https://github.com/lexik/LexikJWTAuthenticationBundle/pull/201) Remove deprecated request injections ([chalasr](https://github.com/chalasr))
 * feature [\#196](https://github.com/lexik/LexikJWTAuthenticationBundle/pull/196) Make *_key_path config options not mandatory ([chalasr](https://github.com/chalasr))
