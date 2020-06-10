@@ -12,7 +12,7 @@ class Inscription
     /**
      * @ORM\Column(type="string", length=25)
      */
-    private $pseudo;
+    private $mdp;
 
     /**
      * @ORM\Id()
@@ -38,17 +38,17 @@ class Inscription
     /**
      * @return mixed
      */
-    public function getPseudo()
+    public function getMdp()
     {
-        return $this->pseudo;
+        return $this->mdp;
     }
 
     /**
-     * @param mixed $pseudo
+     * @param mixed $mdp
      */
-    public function setPseudo($pseudo): void
+    public function setMdp($mdp): void
     {
-        $this->pseudo = $pseudo;
+        $this->mdp = $mdp;
     }
 
     /**
@@ -118,7 +118,7 @@ class Inscription
     public function toArray()
     {
         return [
-            'pseudo' => $this->getPseudo(),
+            'mdp' => $this->getMdp(),
             'mail' => $this->getMail(),
             'age' => $this->getAge(),
             'desobeissant' => $this->getDesobeissant(),

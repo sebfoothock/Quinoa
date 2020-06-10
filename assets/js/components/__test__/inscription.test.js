@@ -12,12 +12,12 @@ it("créer un élément", () => {
 });
 
 describe("<Inscription>", function () {
-  it("Vérifie le fonctionnement du onChange de pseudo", function () {
+  it("Vérifie le fonctionnement du onChange de mot de passe", function () {
     const component = mount(<Inscription />);
     const input = component.find("input").at(0);
     input.instance().value = "hello";
     input.simulate("change");
-    expect(component.state().pseudo).toEqual("hello");
+    expect(component.state().mdp).toEqual("hello");
   });
 
   it("Vérifie le fonctionnement du onChange du mail", function () {

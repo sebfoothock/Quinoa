@@ -23,11 +23,11 @@ class InscriptionRepository extends ServiceEntityRepository
         $this->manager = $manager;
     }
 
-    public function saveInscription($pseudo, $mail, $age, $desobeissant, $sexe)
+    public function saveInscription($mdp, $mail, $age, $desobeissant, $sexe)
     {
         $newInscription = new Inscription();
 
-        $newInscription->setPseudo($pseudo);
+        $newInscription->setMdp($mdp);
         $newInscription->setMail($mail);
         $newInscription->setAge($age);
         $newInscription->setDesobeissant($desobeissant);
