@@ -77,7 +77,7 @@ class Inscription extends Component {
       mdpErreur = "le champ doit être plus long";
     }
 
-    if(!validator.validate(email)){
+    if (!validator.validate(email)) {
       mailErreur = "Veuillez entrer une adresse valide";
     }
 

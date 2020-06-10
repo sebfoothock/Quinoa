@@ -19,7 +19,7 @@ class APIController
     private $resultatsRepository;
 
     public function __construct(InscriptionRepository $inscriptionRepository, EvenementRepository $evenementRepository/*,
-                                ResultatsRepository $resultatsRepository*/)
+ResultatsRepository $resultatsRepository*/)
     {
         $this->inscriptionRepository = $inscriptionRepository;
         $this->evenementRepository = $evenementRepository;
@@ -33,17 +33,17 @@ class APIController
     {
         $data = json_decode($request->getContent(), true);
 
-        $pseudo = $data['mdp'];
+        $mdp = $data['mdp'];
         $mail = $data['mail'];
         $age = $data['age'];
         $desobeissant = $data['desobeissant'];
         $sexe = $data['sexe'];
 
-        if (empty($pseudo) || empty($mail) || empty($age) || empty($desobeissant) || empty($sexe)) {
+        if (empty($mdp) || empty($mail) || empty($age) || empty($desobeissant) || empty($sexe)) {
             throw new NotFoundHttpException('Paramètres obligatoires attendus!');
         }
 
-        $this->inscriptionRepository->saveInscription($pseudo, $mail, $age, $desobeissant, $sexe);
+        $this->inscriptionRepository->saveInscription($mdp, $mail, $age, $desobeissant, $sexe);
 
         return new JsonResponse(['status' => 'Utilisateur crée!'], Response::HTTP_CREATED);
     }
@@ -56,7 +56,7 @@ class APIController
         $inscription = $this->inscriptionRepository->findOneBy(['mail' => $mail]);
 
         $data = [
-            'pseudo' => $inscription->getPseudo(),
+            'mdp' => $inscription->getMdp(),
             'mail' => $inscription->getMail(),
             'age' => $inscription->getAge(),
             'desobeissant' => $inscription->getDesobeissant(),
@@ -76,7 +76,7 @@ class APIController
 
         foreach ($inscriptions as $inscription) {
             $data[] = [
-                'pseudo' => $inscription->getPseudo(),
+                'mdp' => $inscription->getMdp(),
                 'mail' => $inscription->getMail(),
                 'age' => $inscription->getAge(),
                 'desobeissant' => $inscription->getDesobeissant(),
@@ -96,7 +96,7 @@ class APIController
 
         $data = json_decode($request->getContent(), true);
 
-        empty($data['pseudo']) ? true : $inscription->setPseudo($data['pseudo']);
+        empty($data['mdp']) ? true : $inscription->setMdp($data['mdp']);
         empty($data['mail']) ? true : $inscription->setMail($data['mail']);
         empty($data['age']) ? true : $inscription->setAge($data['age']);
         empty($data['desobeissant']) ? true : $inscription->setDesobeissant($data['desobeissant']);
@@ -348,20 +348,20 @@ class APIController
      * @return JsonResponse
      */
     /*public function addResultats(Request $request): JsonResponse
-    {
-        $data = json_decode($request->getContent(), true);
+{
+$data = json_decode($request->getContent(), true);
 
-        $idSession = $data['idSession'];
-        for($i=1;$i<40;$i++){
-            '$reponse'.$i.' = $data[reponse'.$i.'];';
-        }
-        $reponse40=$data['reponse40'];
+$idSession = $data['idSession'];
+for($i=1;$i<40;$i++){
+'$reponse'.$i.' = $data[reponse'.$i.'];';
+}
+$reponse40=$data['reponse40'];
 
-        $reponseGroupe = "";
-        for($i=1;$i<40;$i++)
-            {$reponseGroupe.= '$reponse'.$i.', ';}
-        $this->resultatsRepository->saveResultats($idSession, $reponseGroupe, $reponse40);
+$reponseGroupe = "";
+for($i=1;$i<40;$i++)
+{$reponseGroupe.= '$reponse'.$i.', ';}
+$this->resultatsRepository->saveResultats($idSession, $reponseGroupe, $reponse40);
 
-        return new JsonResponse(['status' => 'Résultats ajoutés!'], Response::HTTP_CREATED);
-    }*/
+return new JsonResponse(['status' => 'Résultats ajoutés!'], Response::HTTP_CREATED);
+}*/
 }
